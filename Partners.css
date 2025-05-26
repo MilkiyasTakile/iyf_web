@@ -1,0 +1,9 @@
+@keyframes slide {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(10%); } /* Stops near the static logo */
+}
+
+.slider {
+  display: flex;
+  animation: slide 10s linear infinite; /* Runs continuously */
+}
