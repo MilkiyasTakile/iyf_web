@@ -21,7 +21,11 @@ function Navbar() {
           <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">GetInvolved</li>
           <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">Contact</li>
         </ul>
-        <i className="bx bx-menu xl:invisible block text-5xl cursor-pointer absolute left-4"
+        <div className="flex xl:justify-center">
+          <img src={logo} alt="logo" 
+               className="w-12 h-12 rounded-full hover:scale-105 transition-all xl:mx-auto block xl:hidden"/>
+        </div>
+        <i className="bx bx-menu xl:invisible block text-5xl cursor-pointer absolute right-4"
           onClick={() => setIsMenuOpen(!isMenuOpen)}></i>
         {/* Mobile Menu */}
         <div className={`absolute xl:invisible top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transition-all duration-300 ${isMenuOpen ? "h-auto" : "h-0 overflow-hidden"}`}>

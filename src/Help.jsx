@@ -16,29 +16,28 @@ function Help() {
     ];
 
     return (
-        <div className="px-4 max-w-screen-lg mx-auto mt-10 ml-20">
-            <h6 className="text-blue-950 text-lg font-semibold">NEED HELP? </h6>
-            <h4 className="text-3xl md:text-4xl font-bold text-blue-950">
-                 Frequently Asked Questions
+        <div className="px-4 max-w-screen-lg mx-auto mt-10">
+            <h6 className="text-blue-950 text-lg md:text-xl font-semibold text-center md:text-left">NEED HELP?</h6>
+            <h4 className="text-2xl md:text-4xl font-bold text-blue-950 text-center md:text-left">
+                Frequently Asked Questions
             </h4>
 
-            <div className="flex flex-col md:flex-row  space-x-10">
-                <div className="p-6 rounded-4xl shadow-md w-full md:w-1/2">
-                    <p className="text-lg md:text-2xl text-blue-950 mt-4">
-                        Join IYF to connect with mentors, participate in discussions, and access leadership resources.
-                    </p>
-                    <img src={community} alt="Community" className="lg:w-full hover:scale-105 transition-all "/>
+            <div className="flex flex-col md:flex-row gap-6 mt-6">
+                {/* Image Section */}
+                <div className="p-6 rounded-xl shadow-md w-full md:w-1/2 flex justify-center">
+                    <img src={community} alt="Community" className="w-full max-w-xs md:max-w-md lg:max-w-lg hover:scale-105 transition-transform duration-300 ease-in-out" />
                 </div>
 
-                <div className="p-6 rounded-4xl shadow-md w-full md:w-1/2">
+                {/* FAQ Section */}
+                <div className="p-6 rounded-xl shadow-md w-full md:w-1/2">
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
-                            <div key={index} className=" bg-white rounded-2xl pb-2 cursor-pointer mt-10">
-                                <strong className="flex justify-between items-center text-2xl" onClick={() => toggleFAQ(index)}>
+                            <div key={index} className="bg-white rounded-xl p-4 cursor-pointer">
+                                <strong className="flex justify-between items-center text-lg md:text-2xl" onClick={() => toggleFAQ(index)}>
                                     <span>{faq.question}</span>
                                     <span>{openFAQ === index ? "-" : "+"}</span>
                                 </strong>
-                                {openFAQ === index && <p className="mt-2 text-lg">{faq.answer}</p>}
+                                {openFAQ === index && <p className="mt-2 text-sm md:text-lg">{faq.answer}</p>}
                             </div>
                         ))}
                     </div>
