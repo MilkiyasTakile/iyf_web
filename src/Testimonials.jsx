@@ -16,6 +16,16 @@ const testimonials = [
     name: "Aisha T.",
     age: "25 years old",
   },
+  {
+  text: "IYF’s programs have transformed my perspective on leadership and personal growth. The guidance and mentorship I received helped me navigate my career path with confidence.",
+  name: "Michael B.",
+  age: "26 years old",
+},
+{
+  text: "The networking opportunities at IYF opened doors I never thought possible. I've connected with inspiring individuals who have encouraged me to reach my full potential.",
+  name: "Sophia N.",
+  age: "20 years old",
+},
 ];
 
 const Testimonials = () => {
@@ -45,13 +55,13 @@ const Testimonials = () => {
             Empowering young leaders through mentorship, training, and skill-building for a successful future.
           </p>
           <div className="mt-4 flex justify-center lg:justify-start space-x-4">
-            <button onClick={prevTestimonial} className="bg-white border border-gray-300 rounded-full p-2">
+            <button onClick={prevTestimonial} className="bg-white border border-gray-300 rounded-full p-2 hover:bg-sky-700 cursor-pointer">
               <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <button onClick={nextTestimonial} className="bg-gray-800 rounded-full p-2">
-              <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button onClick={nextTestimonial} className="bg-white border border-gray-300 rounded-full p-2 hover:bg-sky-700 cursor-pointer">
+              <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
