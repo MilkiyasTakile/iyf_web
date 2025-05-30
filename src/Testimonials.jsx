@@ -32,40 +32,44 @@ const Testimonials = () => {
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
+
   return (
- <div class="bg-white p-8 m-10">
-  <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-    <div class="lg:w-1/3 text-center lg:text-left">
-      <h3 className="mb-5"> TESTIMONIALS</h3>
-      <h1 class="text-gray-900 text-4xl font-bold">What Our Participants Are Saying</h1>
-        <p class="text-gray-700 mt-4 text-2xl">Empowering young leaders through mentorship, training, and skill-building for a successful future.</p>
-      <div class="mt-4 flex justify-center lg:justify-start space-x-4">
-        <button class="bg-white border border-gray-300 rounded-full p-2">
-          <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </button>
-        <button class="bg-gray-800 rounded-full p-2">
-          <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </button>
+    <div className="bg-white p-8 m-10">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="lg:w-1/3 text-center lg:text-left">
+          <h3 className="mb-5 text-lg font-semibold">TESTIMONIALS</h3>
+          <h1 className="text-gray-900 text-4xl font-bold">
+            What Our Participants Are Saying
+          </h1>
+          <p className="text-gray-700 mt-4 text-xl">
+            Empowering young leaders through mentorship, training, and skill-building for a successful future.
+          </p>
+          <div className="mt-4 flex justify-center lg:justify-start space-x-4">
+            <button onClick={prevTestimonial} className="bg-white border border-gray-300 rounded-full p-2">
+              <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button onClick={nextTestimonial} className="bg-gray-800 rounded-full p-2">
+              <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Testimonial Cards */}
+        <div className="flex flex-col lg:flex-row lg:w-2/3 mt-8 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-6">
+          {/* On large screens, show two testimonials */}
+          {testimonials.slice(currentIndex, currentIndex + 2).map((testimonial, index) => (
+            <div key={index} className={`p-4 rounded-3xl shadow-md ${index % 2 === 0 ? "bg-gradient-to-r from-blue-400 to-emerald-400" : "bg-blue-950 text-white"} lg:w-1/2`}>
+              <p className="text-2xl">{testimonial.text}</p>
+              <p className="text-sm mt-2 m-5">— {testimonial.name}, {testimonial.age}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-
-    <div class="flex flex-col lg:flex-row lg:w-2/3 mt-8 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-6">
-      <div class="bg-gradient-to-r from-blue-400 to-emerald-400 p-4 rounded-3xl shadow-md lg:w-1/2">
-        <p class="text-gray-800 text-2xl">"IYF's leadership training gave me the confidence to pursue my dreams. I’ve gained invaluable skills that have shaped my future."</p>
-        <p class="text-gray-600 text-sm mt-2 m-5">— Kevin M., 23</p>
-      </div>
-      <div class="bg-blue-950 p-4 rounded-3xl shadow-md text-white lg:w-1/2">
-        <p class="text-2xl m-5">"The mentorship program connected me with professionals who guided me toward my career path. I feel prepared to take on new challenges."</p>
-        <p class="text-sm mt-2 m-5">— Sarah T., 21</p>
-      </div>
-    </div>
-  </div>
-</div>
-
   );
 };
 
