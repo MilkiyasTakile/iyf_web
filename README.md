@@ -31,5 +31,5 @@ cd IYF-website
 This project was developed by **Milkiyas Takile**.  
 Feel free to connect with me for collaboration or feedback!  
 
-📧 Email: [takilemilkiyas@gmail.com]    
-🌍 GitHub: [https://github.com/MilkiyasTakile](https://github.com/MilkiyasTakile)  
+📧 Email: takilemilkiyas@gmail.com  
+🌍 GitHub: https://github.com/MilkiyasTakile(https://github.com/MilkiyasTakile)  
