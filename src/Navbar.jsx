@@ -23,7 +23,7 @@ function Navbar() {
         </ul>
         <div className="flex xl:justify-center">
           <img src={logo} alt="logo" 
-               className="w-12 h-12 rounded-full hover:scale-105 transition-all xl:mx-auto block xl:hidden"/>
+               className="w-12 h-12 rounded-full hover:scale-105 transition-all mr-85 xl:hidden"/>
         </div>
         <i className="bx bx-menu xl:invisible block text-5xl cursor-pointer absolute right-4"
           onClick={() => setIsMenuOpen(!isMenuOpen)}></i>

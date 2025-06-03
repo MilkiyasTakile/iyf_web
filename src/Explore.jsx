@@ -33,7 +33,7 @@ function Explore() {
           <p className="text-blue-950 mt-4 text-lg md:text-2xl text-justify">
             Practical strategies to stay focused, balanced, and emotionally strong.
           </p>
-          <div className="text-center">
+          <div className="text-center mt-10">
             <button className="bg-red-400 mt-5 hover:bg-sky-700 text-white font-bold text-lg md:text-xl py-3 px-6 rounded-full cursor-pointer">
               Explore
             </button>

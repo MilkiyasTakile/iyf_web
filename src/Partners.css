@@ -1,9 +1,19 @@
 @keyframes slide {
   0% { transform: translateX(100%); }
-  100% { transform: translateX(10%); } /* Stops near the static logo */
+  80% { transform: translateX(10%); } /* Moves to position */
+  85% { transform: translateX(10%) scale(1.1); } /* Adds a slight bounce */
+  100% { transform: translateX(100%); } /* Moves back to start */
 }
 
 .slider {
   display: flex;
-  animation: slide 10s linear infinite; /* Runs continuously */
+  animation: slide 8s ease-in-out infinite; /* Runs continuously */
+}
+
+.slider img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider img:hover {
+  transform: scale(1.2); /* Enlarges slightly on hover */
 }

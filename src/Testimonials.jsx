@@ -44,7 +44,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white p-8 m-10">
+    <div className="bg-white p-8 mt-0 m-10">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
         <div className="lg:w-1/3 text-center lg:text-left">
           <h3 className="mb-5 text-lg font-semibold">TESTIMONIALS</h3>
